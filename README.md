@@ -256,5 +256,4 @@ print(text)
 ## 📄 License
 
 MIT — free to use, modify, and distribute.
-#   S t r u c t u r a P D F  
- 
+# StructuraPDF
