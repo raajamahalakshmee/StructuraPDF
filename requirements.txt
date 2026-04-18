@@ -1,0 +1,58 @@
+# ──────────────────────────────────────────────────────────────
+#  Advanced PDF Text Extractor and Merger System
+#  requirements.txt
+# ──────────────────────────────────────────────────────────────
+#
+#  Install all dependencies with:
+#      pip install -r requirements.txt
+#
+# ──────────────────────────────────────────────────────────────
+
+# PDF reading/writing and merging
+PyPDF2>=3.0.0
+
+# High-quality text extraction from selectable PDFs
+pdfminer.six>=20221105
+
+# OCR – Python wrapper for Tesseract
+pytesseract>=0.3.10
+
+# Convert PDF pages to images for OCR
+pdf2image>=1.16.3
+
+# Image processing (required by pytesseract and pdf2image)
+Pillow>=10.0.0
+
+# ── Word Document Support ─────────────────────────────────────────────────────
+
+# Read/write/merge .docx Word files
+python-docx>=1.1.0
+
+# Word (.docx) → PDF conversion
+# NOTE (Windows): Requires Microsoft Word to be installed on the machine.
+# NOTE (macOS/Linux): Requires LibreOffice to be installed.
+docx2pdf>=0.1.8
+
+# PDF → Word (.docx) conversion
+pdf2docx>=0.5.6
+
+# Prevent numpy 2.x conflicts with other libraries in your environment
+numpy<2.0.0
+
+# ──────────────────────────────────────────────────────────────
+# Tkinter ships with standard Python – no separate install needed.
+#
+# EXTERNAL BINARIES (must be installed separately):
+#
+# 1. Tesseract OCR (for OCR support):
+#    Windows : https://github.com/UB-Mannheim/tesseract/wiki
+#    macOS   : brew install tesseract
+#    Linux   : sudo apt install tesseract-ocr
+#
+# 2. Poppler (required by pdf2image to render PDF pages):
+#    Windows : https://github.com/oschwartz10612/poppler-windows/releases
+#              Extract and add the "bin" folder to your system PATH
+#              -or- pass poppler_path= argument in ocr_utils.perform_ocr()
+#    macOS   : brew install poppler
+#    Linux   : sudo apt install poppler-utils
+# ──────────────────────────────────────────────────────────────
